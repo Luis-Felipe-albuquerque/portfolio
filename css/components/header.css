@@ -1,0 +1,244 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--black);
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.menu.scrolled {
+    opacity: .4;
+}
+
+.menu .nav_menu {
+    padding: 1rem 3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .nav_menu .menu_item {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu .nav_menu .menu_item li {
+    display: inline-block;
+
+}
+
+.menu .nav_menu .menu_item li:not(:last-of-type) {
+    margin-right: 2rem;
+}
+
+.menu .nav_menu .menu_item a {
+    padding: 1rem 0rem 1rem;
+    display: inline-block;
+    transition: .2s;
+}
+
+/* EFEITO ITENS MENU */
+.menu .nav_menu .menu_item a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 30px;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu .nav_menu .menu_item a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.menu .nav_menu .menu_item a:hover {
+    transform: scale(1.07);
+    color: var(--tertiary-color);
+}
+
+/* TAMANHO IMAGEM E ESPAÇAMENTO ---------------------------------------------------------------------*/
+.menu .nav_menu img {
+    height: 42px;
+}
+
+.menu .nav_menu a {
+    display: flex;
+}
+
+
+/* BOTÃO CONTATO ------------------------------------------------------------------------------------*/
+.btn button {
+    padding: 1rem 4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-color: #6068d1;
+    border: 0;
+    border-radius: 3rem;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn button:hover {
+    box-shadow: 0px 0px 2px #af99ff;
+    transform: scale(1.02);
+}
+
+/* FIM */
+
+/* DARK MOD BUTTON-----------------------------------------------------------------------------------*/
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+}
+
+.sun svg {
+    position: absolute;
+    top: 4px;
+    left: 35px;
+    z-index: 1;
+    width: 26px;
+    height: 26px;
+}
+
+.moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.sun svg {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.moon svg {
+    animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.input:checked+.slider {
+    background-color: #183153;
+}
+
+.input:focus+.slider {
+    box-shadow: 0 0 1px #183153;
+}
+
+.input:checked+.slider:before {
+    transform: translateX(30px);
+}
+
+/* FIM */
+
+/* DARK MODE --------------------------------------------------------------------------------------*/
+body {
+    background-color: #000000;
+    height: 3000px;
+    transition: .5s;
+}
+
+body.dark {
+    background-color: #ffffff;
+    /* background: linear-gradient(to bottom, black, rgb(130, 96, 255), rgb(175, 153, 255), white); */
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    /* Largura total e altura de 100vh */
+    height: 3000px;
+}
+
+body.dark h1 {
+    color: #000000;
+}
+
+body.dark p {
+    color: #000000;
+}
+
+body.dark .home .home_text .social_icons a {
+    filter: invert(0%) sepia(0%) saturate(7%) hue-rotate(166deg) brightness(107%) contrast(102%);
+}
+
+body.dark .home .home_text .social_icons a:hover {
+    filter: invert(44%) sepia(99%) saturate(337%) hue-rotate(197deg) brightness(82%) contrast(101%);
+}
+
+/* FIM */

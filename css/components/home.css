@@ -1,0 +1,45 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    scroll-margin-top: 20rem;
+}
+
+.home .home_text {
+    max-width: 62rem;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home .home_text p {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    max-width: 50rem;
+}
+
+.home .home_text h1 {
+    margin-right: 1rem;
+}
+
+.home .img_site img {
+    position: relative;
+    line-height: 0;
+}
+
+.home .home_text .social_icons a {
+    display: inline-block;
+    filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+
+.home .home_text .social_icons a:hover {
+    transform: scale(1.07);
+    filter: invert(44%) sepia(99%) saturate(337%) hue-rotate(197deg) brightness(82%) contrast(101%);
+}
+
+.home .home_text h1 span{
+    color: var(--tertiary-color);
+    font-size: 50px;
+}
