@@ -14,7 +14,7 @@
 }
 
 .menu .nav_menu {
-    padding: 1rem 3rem 1rem;
+    padding: 1rem 4rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,7 +105,7 @@
     width: 64px;
     height: 34px;
     cursor: pointer;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 .switch input {
