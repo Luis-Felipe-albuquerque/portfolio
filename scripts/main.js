@@ -26,3 +26,19 @@ window.addEventListener('scroll', () => {
 menu.addEventListener('mouseover', () => {
     menu.classList.remove('scrolled');
 });
+
+///////////////////////////////////  TESTE  /////////////////////////////////////////////////////
+// Seleciona o botão "Ver mais" e as imagens adicionais
+let seeMoreButton = document.getElementById('see_more');
+let additionalImages = document.querySelectorAll('.skills_images img:not(:nth-child(-n+4))');
+
+// Adiciona um evento de clique ao botão "Ver mais"
+seeMoreButton.addEventListener('click', () => {
+  // Alterna a visibilidade das imagens adicionais
+  additionalImages.forEach(image => {
+    image.style.display = (image.style.display === 'none') ? 'inline-block' : 'none';
+  });
+
+  // Altera o texto do botão conforme o estado
+  seeMoreButton.textContent = (seeMoreButton.textContent === 'Ver mais') ? 'Ver menos' : 'Ver mais';
+});

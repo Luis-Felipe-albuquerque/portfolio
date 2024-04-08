@@ -1,0 +1,47 @@
+/* DARK MODE --------------------------------------------------------------------------------------*/
+body {
+    background-color: #000000;
+    height: 3000px;
+    transition: .5s;
+}
+
+body.dark {
+    background-color: #ffffff;
+    /* background: linear-gradient(to bottom, black, rgb(130, 96, 255), rgb(175, 153, 255), white); */
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    /* Largura total e altura de 100vh */
+    height: 3000px;
+}
+
+body.dark h1 {
+    color: #000000;
+}
+
+body.dark h2 {
+    color: #000000;
+}
+
+body.dark p {
+    color: #000000;
+}
+
+body.dark .home .home_text .social_icons a {
+    filter: invert(0%) sepia(0%) saturate(7%) hue-rotate(166deg) brightness(107%) contrast(102%);
+}
+
+body.dark .home .home_text .social_icons a:hover {
+    filter: invert(44%) sepia(99%) saturate(337%) hue-rotate(197deg) brightness(82%) contrast(101%);
+}
+
+body.dark .about_section .about_left .skills_images #vazia{
+    filter: invert(0%) sepia(0%) saturate(12%) hue-rotate(257deg) brightness(104%) contrast(104%);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* dark mode no efeito shawdonw nos svg */
+
+body.dark .about_section .about_left .skills_images img:hover {
+    filter: drop-shadow(0 0 0.75rem black); /* Adiciona uma sombra para simular a borda */
+}
